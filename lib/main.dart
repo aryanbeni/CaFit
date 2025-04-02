@@ -2,6 +2,8 @@ import 'package:cafit/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'onboarding_screen.dart';
 import 'screens/navigation_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'bloc/bloc_cubit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +14,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MultiBlocProvider(
+        providers: [
+        BlocProvider(create: (context) => NavCubit()),
+    ],
+      child:
+      MaterialApp(
       title: 'CaFit',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
@@ -25,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => NavigationScreen(),
       },
       // home: const WelcomeScreen(),
+    ),
     );
   }
 }
