@@ -1,6 +1,6 @@
 # cafit
 
-A new Flutter project.
+CaFit Fitness Kit - Health, Fitness & Workout (Community)
 
 ## Getting Started
 
