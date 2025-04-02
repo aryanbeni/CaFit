@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 class AppColors {
+  static Color primaryColor = const Color(0xffF15223);
   static Color pullToRefreshText = const Color(0xFF0862BC);
   static Color pullToRefreshTextBackground = const Color(0xFFECF6FE);
   static Color bottomfoldbgligth = const Color.fromRGBO(52, 52, 52, 1);
