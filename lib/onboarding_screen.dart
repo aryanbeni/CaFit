@@ -4,53 +4,56 @@ import 'package:introduction_screen/introduction_screen.dart';
 class OnboardingScreen extends StatelessWidget {
   final List<PageViewModel> pages = [
     PageViewModel(
-      title: "Welcome to My App",
-      body: "This is the first screen of the onboarding flow.",
+      title: "Challenge with Friends",
+      body: "Let\'s start the week with a challenge with your best friends",
       image: Center(
-        child: Image.asset("assets/images/slide1.png", height: 200),
+        child: Image.asset("assets/images/personal-training.png", height: 200),
       ),
       decoration: const PageDecoration(
-        titleTextStyle: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        bodyTextStyle: TextStyle(fontSize: 16),
+        // pageColor: Colors.white,
+        titleTextStyle: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+        bodyTextStyle: TextStyle(fontSize: 20),
       ),
     ),
     PageViewModel(
-      title: "Explore Features",
-      body: "Discover amazing tools to boost your productivity.",
+      title: "Join the Challenge",
+      body: "Let\'s start the week with a challenge with your best friends",
       image: Center(
-        child: Image.asset("assets/images/slide2.png", height: 200),
+        child: Image.asset("assets/images/fitness-tracker.png", height: 200),
       ),
-    ),
-    PageViewModel(
-      title: "Get Started",
-      body: "Ready to begin your journey?",
-      image: Center(
-        child: Image.asset("assets/images/slide3.png", height: 200),
+      decoration: const PageDecoration(
+        // pageColor: Colors.white,
+        titleTextStyle: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+        bodyTextStyle: TextStyle(fontSize: 20),
       ),
     ),
   ];
 
-   OnboardingScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: IntroductionScreen(
+    return Scaffold(backgroundColor: Colors.white,
+      body: Padding(padding: EdgeInsets.symmetric(horizontal: 12,vertical: 32),child:
+    IntroductionScreen(
       pages: pages,
-      showSkipButton: true,
-      skip: const Text("Skip", style: TextStyle(color: Colors.grey)),
-      next: const Text("Next", style: TextStyle(color: Colors.blue)),
-      done: const Text("Done", style: TextStyle(color: Colors.blue)),
-      onDone: () {
-        // Navigate to the home screen
-        Navigator.pushReplacementNamed(context, '/home');
-      },
+      // showSkipButton: true,
+      // skip: const Text("Skip", style: TextStyle(color: Colors.grey)),
+      next: const Text("Next", style: TextStyle(color: Color(0xffF15223),fontSize: 18)),
+      done: const Text("Next", style: TextStyle(color: Color(0xffF15223),fontSize: 18)),
+      onDone: () =>
+        Navigator.pushReplacementNamed(context, '/home'),
       dotsDecorator: DotsDecorator(
         size: const Size(10, 10),
+        // color: Colors.transparent,
+        activeColor: Color(0xffF15223),
         activeSize: const Size(22, 10),
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
       ),
+      // dotsFlex: 0,
+      // controlsFlex: 1,
+      controlsPadding: EdgeInsets.only(bottom: 40),
+    ),
     ),
     );
   }

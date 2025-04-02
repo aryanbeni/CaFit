@@ -1,7 +1,7 @@
 import 'package:cafit/welcome_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'onboarding_screen.dart';
+import 'screens/navigation_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,13 +15,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'CaFit',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
         useMaterial3: true,
       ),
-      initialRoute: '/onboarding',
+      initialRoute: '/welcome',
       routes: {
+        '/welcome': (context) => WelcomeScreen(),
         '/onboarding': (context) => OnboardingScreen(),
-        '/home': (context) => WelcomeScreen(),
+        '/home': (context) => NavigationScreen(),
       },
       // home: const WelcomeScreen(),
     );

@@ -29,7 +29,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               Spacer(),
               Padding(
                 padding: const EdgeInsets.only(bottom: 20.0),
-                child: Container(
+                child: GestureDetector(child:
+                Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(colors: [Color(0xffFD371F),Color(0xffFF844B)]),
@@ -41,7 +42,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     child: Text('Let\'s Walk',style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
                   ),
                 ),
+                    onTap: ()=> Navigator.pushReplacementNamed(context, '/onboarding'
+                    ),
               )
+              ),
             ],
           ),
         ),
