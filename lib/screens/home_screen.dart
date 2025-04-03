@@ -44,14 +44,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 32,
                 width: 111,
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Color(0xfff5d6d6),
-                      Color(0xfff6e0e0),
-                    ],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),              borderRadius: BorderRadius.circular(10),
+                  color: Color(0xfff2d2c8),
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 child:
                 Center(child: Text('Today, 2 Apr',style: TextStyle(color: Color(0xff000000),fontWeight: FontWeight.bold),),

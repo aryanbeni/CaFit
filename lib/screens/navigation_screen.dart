@@ -52,22 +52,19 @@ class _CustomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // Removed the border decoration completely
-      child: Padding(
-        padding:
-            const EdgeInsets.only(top: 8.0, bottom: 12.0), // Adjusted padding
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            _buildNavItem(context, 0, Icons.home_outlined, 'Home'),
-            _buildNavItem(context, 1, Icons.location_on_outlined, 'Map'),
-            _buildSpecialStartButton(context),
-            _buildNavItem(context, 3, Icons.monitor_heart_outlined, 'Social'),
-            _buildNavItem(
-                context, 4, Icons.local_fire_department_outlined, 'Reward'),
-          ],
-        ),
-      ),
+      padding: const EdgeInsets.only(top: 8.0,bottom: 12.0),
+            child:
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.end, // Align items at bottom
+              children: [
+                _buildNavItem(context, 0, 'assets/images/home_icon.png', 'Home'),
+                _buildNavItem(context, 1, 'assets/images/Location.png', 'Map'),
+                _buildSpecialStartButton(context),
+                _buildNavItem(context, 3, 'assets/images/Heart.png', 'Social'),
+                _buildNavItem(context, 4, 'assets/images/Medal_gold.png', 'Reward'),
+              ],
+            ),
     );
   }
 
@@ -76,34 +73,33 @@ class _CustomNavigationBar extends StatelessWidget {
 
     return GestureDetector(
       onTap: () => onTap(2),
-      child: Container(
-        margin: const EdgeInsets.only(bottom: 12),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              Icons.play_circle_rounded,
-              size: 76,
-              color: const Color(0xFFF15223),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            margin: const EdgeInsets.only(bottom: 8),
+            child: Image.asset(
+              'assets/images/Play.png',
+              height: 65,
+              width: 65,
             ),
-            if (isSelected)
-              Container(
-                margin: const EdgeInsets.only(top: 4),
-                width: 4,
-                height: 4,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Color(0xFFF15223),
-                ),
+          ),
+          if (isSelected)
+            Container(
+              width: 4,
+              height: 4,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Color(0xFFF15223),
               ),
-          ],
-        ),
+            ),
+        ],
       ),
     );
   }
 
   Widget _buildNavItem(
-      BuildContext context, int index, IconData icon, String label) {
+      BuildContext context, int index, String navLogo, String label) {
     final isSelected = index == currentIndex;
 
     return GestureDetector(
@@ -113,7 +109,12 @@ class _CustomNavigationBar extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            if (!isSelected) Icon(icon, size: 24, color: Colors.black54),
+            if (!isSelected)
+              SizedBox(
+                height: 24,
+                width: 24,
+                child: Image.asset(navLogo),
+              ),
             if (isSelected)
               Column(
                 children: [
