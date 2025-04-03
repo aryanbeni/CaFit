@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class AppColors {
   static Color primaryColor = const Color(0xffF15223);
   static Color pullToRefreshText = const Color(0xFF0862BC);
@@ -59,7 +60,7 @@ class AppColors {
   static Color activeTradeCardGreen = const Color(0xFF148F36);
   static Color waitingTradeCardYellow = const Color(0xFFEF9400);
   static Color portfolioShowSellStocksCardBackgroundColor =
-  const Color(0xFFFCF1CF);
+      const Color(0xFFFCF1CF);
   static Color upiBackgroundLightGreenColor = const Color(0xFFEBF1ED);
   static Color fadedBackgroundRedColor = const Color(0xFFFFF7F5);
   static Color fadedBackgroundGreenColor = const Color(0xFFFAFFFB);
@@ -185,15 +186,18 @@ class AppColors {
   static Color blueGradient = const Color(0xFFFAFCFF);
   static Color blueGradient2 = const Color(0xFFE7F2FF);
   static Color playButtonColor = const Color(0xFF141E30);
-  static Color ipoVerdictCardBorderYellowColor = const Color.fromRGBO(239, 148, 0, 1);
+  static Color ipoVerdictCardBorderYellowColor =
+      const Color.fromRGBO(239, 148, 0, 1);
   static Color ipoLevelGreenColor = const Color.fromRGBO(20, 143, 54, 1);
   static Color ipoTableHeadingColor = const Color.fromRGBO(13, 115, 206, 1);
-  static Color ipoLightTableHeadingColor = const Color.fromRGBO(13, 115, 206, 0.5);
+  static Color ipoLightTableHeadingColor =
+      const Color.fromRGBO(13, 115, 206, 0.5);
   static Color ipoVeryLightblueColor = const Color.fromRGBO(236, 246, 254, 1);
-  static Color sharksListBorderColorGrey = const Color.fromRGBO(223, 223, 223, 1);
+  static Color sharksListBorderColorGrey =
+      const Color.fromRGBO(223, 223, 223, 1);
   static Color bluePrimary800 = const Color.fromRGBO(8, 98, 188, 1);
   static Color blackPrimary800 = const Color.fromRGBO(65, 65, 65, 1);
-  static Color Grey800= const Color.fromRGBO(188, 188, 188, 1);
+  static Color Grey800 = const Color.fromRGBO(188, 188, 188, 1);
 
   /// stocks Holdings Graph Color
   static Color graphDarkGreenColor = const Color.fromRGBO(0, 95, 115, 1);
@@ -204,13 +208,12 @@ class AppColors {
   static Color graphGreyColor = const Color.fromRGBO(211, 211, 211, 1);
   static Color greyNeutral600 = const Color.fromRGBO(116, 116, 116, 1);
   static Color greyNeutral700 = const Color.fromRGBO(96, 96, 96, 1);
-  static Color whiteBackground =const Color.fromRGBO(252, 252, 252,1);
+  static Color whiteBackground = const Color.fromRGBO(252, 252, 252, 1);
   static Color purpleGradientLight = const Color.fromRGBO(112, 110, 170, 1);
   static Color purpleGradientDark = const Color.fromRGBO(46, 56, 148, 1);
   static Color grey500 = const Color.fromRGBO(157, 157, 157, 1);
 
-
-  static Color meterOrangeColors  = const Color(0XFFF07D19);
+  static Color meterOrangeColors = const Color(0XFFF07D19);
   static Color meterKnobColors = const Color(0XFF3D3854);
   static Color meterBackgroundColor = const Color(0XFF080226);
   static Color yellowMorningDigest = const Color(0XFFF6EACF);
@@ -223,52 +226,52 @@ class AppColors {
   static Color cupertinoBlue = const Color(0XFF0862BC);
   static Color screenerBoxYellow = const Color(0XFFE8BE2C);
   static Color screenerBoxPurple = const Color(0XFFA06ED1);
-  static Color darkGradientColorValue  = const Color(0XFF332E4C);
-  static Color shortTerm  = const Color(0XFF83190F);
-  static Color mediumTerm  = const Color(0XFF002F6F);
-  static Color longTerm  = const Color(0XFF002F6F);
-  static Color optionTerm  = const Color(0XFFCF1D3D);
-  static Color mcxTerm  = const Color(0XFF61400C);
-  static Color futureTerm  = const Color(0XFF640254);
-  static Color stockSummary  = const Color(0XFFFF9D44);
-  static Color commoditySummary  = const Color(0XFFB9995B);
-  static Color primary700  = const Color(0XFF0D73CE);
-  static Color lightYellowSubscribeGradient = const Color.fromRGBO(255, 132, 21, 1);
-  static Color darkYellowSubscribeGradient = const Color.fromRGBO(255, 202, 63, 1);
+  static Color darkGradientColorValue = const Color(0XFF332E4C);
+  static Color shortTerm = const Color(0XFF83190F);
+  static Color mediumTerm = const Color(0XFF002F6F);
+  static Color longTerm = const Color(0XFF002F6F);
+  static Color optionTerm = const Color(0XFFCF1D3D);
+  static Color mcxTerm = const Color(0XFF61400C);
+  static Color futureTerm = const Color(0XFF640254);
+  static Color stockSummary = const Color(0XFFFF9D44);
+  static Color commoditySummary = const Color(0XFFB9995B);
+  static Color primary700 = const Color(0XFF0D73CE);
+  static Color lightYellowSubscribeGradient =
+      const Color.fromRGBO(255, 132, 21, 1);
+  static Color darkYellowSubscribeGradient =
+      const Color.fromRGBO(255, 202, 63, 1);
   static Color white300 = const Color.fromRGBO(223, 223, 223, 1);
 
   static Color exploreMenuButtonGradientColor1 = const Color(0XFFE4E2DE);
   static Color exploreMenuButtonGradientColor2 = const Color(0XFFE4EDF7);
   static Color explorePastTradeCountCardColor1 = const Color(0XFF1A379E);
   static Color explorePastTradeCountCardColor2 = const Color(0XFFC379FE);
-  static Color dividerVeryLightBlueColor = const Color.fromRGBO(186, 221, 250, 1);
+  static Color dividerVeryLightBlueColor =
+      const Color.fromRGBO(186, 221, 250, 1);
   static Color borderBlurRadius = const Color(0XFF6A7381);
   static Color tradeBoardShadowColor = const Color.fromRGBO(208, 211, 215, 1);
   static Color googleBackground = const Color.fromRGBO(73, 139, 247, 1);
-  static Color orderPageBackgroundColor = const Color.fromRGBO(242, 242, 242, 1);
-  static Color orderVeryLightBlueBackgrounfColor = const Color.fromRGBO(236, 246, 254, 1);
+  static Color orderPageBackgroundColor =
+      const Color.fromRGBO(242, 242, 242, 1);
+  static Color orderVeryLightBlueBackgrounfColor =
+      const Color.fromRGBO(236, 246, 254, 1);
   static Color marketDepthredColor = const Color.fromRGBO(250, 230, 223, 1);
   static Color marketGreenColor = const Color.fromRGBO(220, 237, 231, 1);
   static Color marketNoteVeryLightRed = const Color.fromRGBO(255, 247, 245, 1);
   static Color basketLightYellowColor = const Color.fromRGBO(242, 184, 7, 0.25);
   static Color veryLightFreyBackGround = const Color.fromRGBO(245, 245, 245, 1);
-  static Color green_250_255_251_1 = const Color.fromRGBO(250,255,251,1);
-  static Color green_38_166_73_1 = const Color.fromRGBO(38,166,73,1);
-  static Color yellow_239_148_0_1 = const Color.fromRGBO(239,148,0,1);
-  static Color light_yellow_239_148_0_1 =const Color.fromRGBO(255, 239, 214, 1);
+  static Color green_250_255_251_1 = const Color.fromRGBO(250, 255, 251, 1);
+  static Color green_38_166_73_1 = const Color.fromRGBO(38, 166, 73, 1);
+  static Color yellow_239_148_0_1 = const Color.fromRGBO(239, 148, 0, 1);
+  static Color light_yellow_239_148_0_1 =
+      const Color.fromRGBO(255, 239, 214, 1);
   static Color veryLightGreenGradient = const Color.fromRGBO(251, 255, 239, 1);
   static Color commodityDarkBrownColor = const Color.fromRGBO(92, 57, 0, 1);
-  static Color commoditYellowishBrownColor = const Color.fromRGBO(255, 201, 112, 1);
-  static Color commodityLightBrownColor = const Color.fromRGBO(255, 224, 173, 1);
+  static Color commoditYellowishBrownColor =
+      const Color.fromRGBO(255, 201, 112, 1);
+  static Color commodityLightBrownColor =
+      const Color.fromRGBO(255, 224, 173, 1);
   static Color commodityyellowishWhite = const Color.fromRGBO(255, 249, 240, 1);
-  static Color commodity_163_101_0_1 =const Color.fromRGBO(163,101,0,1);
-  static Color greenCheckBoxColor =const Color.fromRGBO(62,189,97,1);
-
-
-
-
-
-
+  static Color commodity_163_101_0_1 = const Color.fromRGBO(163, 101, 0, 1);
+  static Color greenCheckBoxColor = const Color.fromRGBO(62, 189, 97, 1);
 }
-
-

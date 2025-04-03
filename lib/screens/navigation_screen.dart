@@ -54,7 +54,8 @@ class _CustomNavigationBar extends StatelessWidget {
     return Container(
       // Removed the border decoration completely
       child: Padding(
-        padding: const EdgeInsets.only(top: 8.0, bottom: 12.0), // Adjusted padding
+        padding:
+            const EdgeInsets.only(top: 8.0, bottom: 12.0), // Adjusted padding
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -62,7 +63,8 @@ class _CustomNavigationBar extends StatelessWidget {
             _buildNavItem(context, 1, Icons.location_on_outlined, 'Map'),
             _buildSpecialStartButton(context),
             _buildNavItem(context, 3, Icons.monitor_heart_outlined, 'Social'),
-            _buildNavItem(context, 4, Icons.local_fire_department_outlined, 'Reward'),
+            _buildNavItem(
+                context, 4, Icons.local_fire_department_outlined, 'Reward'),
           ],
         ),
       ),
@@ -100,7 +102,8 @@ class _CustomNavigationBar extends StatelessWidget {
     );
   }
 
-  Widget _buildNavItem(BuildContext context, int index, IconData icon, String label) {
+  Widget _buildNavItem(
+      BuildContext context, int index, IconData icon, String label) {
     final isSelected = index == currentIndex;
 
     return GestureDetector(
@@ -111,27 +114,28 @@ class _CustomNavigationBar extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             if (!isSelected) Icon(icon, size: 24, color: Colors.black54),
-            if (isSelected) Column(
-              children: [
-                Text(
-                  label,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.black,
+            if (isSelected)
+              Column(
+                children: [
+                  Text(
+                    label,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.black,
+                    ),
                   ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(top: 4),
-                  width: 4,
-                  height: 4,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0xFFF15223),
+                  Container(
+                    margin: const EdgeInsets.only(top: 4),
+                    width: 4,
+                    height: 4,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Color(0xFFF15223),
+                    ),
                   ),
-                ),
-              ],
-            )
+                ],
+              )
           ],
         ),
       ),

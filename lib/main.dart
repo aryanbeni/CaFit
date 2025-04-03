@@ -15,24 +15,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-        providers: [
+      providers: [
         BlocProvider(create: (context) => NavCubit()),
-    ],
-      child:
-      MaterialApp(
-      title: 'CaFit',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
-        useMaterial3: true,
+      ],
+      child: MaterialApp(
+        title: 'CaFit',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
+          useMaterial3: true,
+        ),
+        initialRoute: '/welcome',
+        routes: {
+          '/welcome': (context) => WelcomeScreen(),
+          '/onboarding': (context) => OnboardingScreen(),
+          '/home': (context) => NavigationScreen(),
+        },
+        // home: const WelcomeScreen(),
       ),
-      initialRoute: '/welcome',
-      routes: {
-        '/welcome': (context) => WelcomeScreen(),
-        '/onboarding': (context) => OnboardingScreen(),
-        '/home': (context) => NavigationScreen(),
-      },
-      // home: const WelcomeScreen(),
-    ),
     );
   }
 }

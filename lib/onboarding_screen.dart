@@ -31,30 +31,33 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.white,
-      body: Padding(padding: EdgeInsets.symmetric(horizontal: 12,vertical: 32),child:
-    IntroductionScreen(
-      pages: pages,
-      // showSkipButton: true,
-      // skip: const Text("Skip", style: TextStyle(color: Colors.grey)),
-      next: const Text("Next", style: TextStyle(color: Color(0xffF15223),fontSize: 18)),
-      done: const Text("Next", style: TextStyle(color: Color(0xffF15223),fontSize: 18)),
-      onDone: () =>
-        Navigator.pushReplacementNamed(context, '/home'),
-      dotsDecorator: DotsDecorator(
-        size: const Size(10, 10),
-        // color: Colors.transparent,
-        activeColor: Color(0xffF15223),
-        activeSize: const Size(22, 10),
-        activeShape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 32),
+        child: IntroductionScreen(
+          pages: pages,
+          // showSkipButton: true,
+          // skip: const Text("Skip", style: TextStyle(color: Colors.grey)),
+          next: const Text("Next",
+              style: TextStyle(color: Color(0xffF15223), fontSize: 18)),
+          done: const Text("Next",
+              style: TextStyle(color: Color(0xffF15223), fontSize: 18)),
+          onDone: () => Navigator.pushReplacementNamed(context, '/home'),
+          dotsDecorator: DotsDecorator(
+            size: const Size(10, 10),
+            // color: Colors.transparent,
+            activeColor: Color(0xffF15223),
+            activeSize: const Size(22, 10),
+            activeShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(24),
+            ),
+          ),
+          // dotsFlex: 0,
+          // controlsFlex: 1,
+          controlsPadding: EdgeInsets.only(bottom: 40),
         ),
       ),
-      // dotsFlex: 0,
-      // controlsFlex: 1,
-      controlsPadding: EdgeInsets.only(bottom: 40),
-    ),
-    ),
     );
   }
 }
