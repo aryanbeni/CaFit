@@ -52,19 +52,18 @@ class _CustomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 8.0,bottom: 12.0),
-            child:
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.end, // Align items at bottom
-              children: [
-                _buildNavItem(context, 0, 'assets/images/home_icon.png', 'Home'),
-                _buildNavItem(context, 1, 'assets/images/Location.png', 'Map'),
-                _buildSpecialStartButton(context),
-                _buildNavItem(context, 3, 'assets/images/Heart.png', 'Social'),
-                _buildNavItem(context, 4, 'assets/images/Medal_gold.png', 'Reward'),
-              ],
-            ),
+      padding: const EdgeInsets.only(top: 8.0, bottom: 12.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.end, // Align items at bottom
+        children: [
+          _buildNavItem(context, 0, 'assets/images/home_icon.png', 'Home'),
+          _buildNavItem(context, 1, 'assets/images/Location.png', 'Map'),
+          _buildSpecialStartButton(context),
+          _buildNavItem(context, 3, 'assets/images/Heart.png', 'Social'),
+          _buildNavItem(context, 4, 'assets/images/Medal_gold.png', 'Reward'),
+        ],
+      ),
     );
   }
 
